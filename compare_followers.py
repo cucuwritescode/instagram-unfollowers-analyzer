@@ -19,5 +19,5 @@ for entry in following_data:
             following.add(item['value'])
 #encontrar a los usuarios que seguis pero no te siguen
 not_following_back = sorted(list(following - followers))
-# Output the result
+#imprimir resultado
 print("Users not following back:", not_following_back)
