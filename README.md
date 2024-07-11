@@ -20,9 +20,9 @@
    ```sh
    git clone https://github.com/cucuwritescode/instagram-unfollowers-analyzer.git
    cd instagram-unfollowers
-2. Place your JSON data files (followers and followings) in the project directory.
-3. Update the file paths in the compare_followers.py script to point to your JSON files.
-4. Run the script!
-
-
-Feel free to modify this description to better fit your needs or any additional features you might include.
+2. Install required dependencies
+   ```sh
+   pip install PyQt5 simpleaudio
+3. Place your personal JSON data files (followers.json and followings.json) in the project directory.
+4. Update the file paths in the compare_followers.py script to point to your JSON files if necessary.
+5. Run the Application!
