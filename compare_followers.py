@@ -4,6 +4,8 @@ import pygame
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QPushButton, QFileDialog, QTextEdit, QProgressBar
 from PyQt5.QtGui import QIcon, QPixmap
 from PyQt5.QtCore import Qt, QThread, pyqtSignal
+import pygame
+pygame.mixer.init(devicename='Background Music')  
 
 class AnalyzerThread(QThread):
     progress = pyqtSignal(int)
