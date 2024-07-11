@@ -6,6 +6,8 @@
 ## Video Demonstration
 
 [![Watch the video](video/Screen%20Recording%202024-07-10%20at%2023.24.40.mov)](video/Screen%20Recording%202024-07-10%20at%2023.24.40.mov)
+or: https://www.youtube.com/watch?v=cvJhd_C2ihA
+
 
 ## Clone the repository and use it yourself!
 - **Load Instagram Data:** Import JSON files containing your followers and followings data.
