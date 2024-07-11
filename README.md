@@ -3,6 +3,8 @@
 
 -A simple Python tool that helps you identify which users you follow on Instagram do not follow you back. By analyzing the JSON data provided by Instagram’s data export tool, the script compares your list of followers and followings to generate a list of non-followers. This tool provides a simple and reliable way to manage your Instagram connections without relying on third-party apps or services that may steal your data.
 
+## Video Demonstration
+[Watch on YouTube](https://www.youtube.com/watch?v=cvJhd_C2ihA)
 
 ## Clone the repository and use it yourself!
 - **Load Instagram Data:** Import JSON files containing your followers and followings data.
@@ -10,11 +12,9 @@
 - **Output Results:** Display the list of non-followers in the console.
 
 ## Requirements
-** Download your Instagram data (in JSON format) from Instagram's data export tool.
-**Python 3.x
-**JSON data files exported from Instagram (These files might take a few hours to receive from Meta)
-
-## Setup and Installation
+- ** Download your Instagram data (in JSON format) from Instagram's data export tool [here](https://www.instagram.com/download/request/).
+- **Python 3.x
+- **JSON data files exported from Instagram (These files might take a few hours to receive from Meta)
 
 1. Clone the repository:
    ```sh
