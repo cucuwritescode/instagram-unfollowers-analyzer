@@ -22,7 +22,7 @@
    cd instagram-unfollowers
 2. Install required dependencies
    ```sh
-   pip install PyQt5 simpleaudio
+   pip3 install PyQt5 simpleaudio
 3. Place your personal JSON data files (followers.json and followings.json) in the project directory.
 4. Update the file paths in the compare_followers.py script to point to your JSON files if necessary.
 5. Run the Application!
