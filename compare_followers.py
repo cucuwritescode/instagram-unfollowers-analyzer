@@ -72,7 +72,6 @@ class UnfollowersAnalyzer(QWidget):
 
         self.result_text = QTextEdit(self)
         self.result_text.setReadOnly(True)
-        self.result_text.verticalScrollBar().valueChanged.connect(self.play_rick_astley)
         layout.addWidget(self.result_text)
 
         self.setLayout(layout)
@@ -174,7 +173,7 @@ class UnfollowersAnalyzer(QWidget):
         not_following_back = self.analyzer_thread.result
         self.result_text.clear()
         self.result_text.append("\n".join(not_following_back))
-        self.play_sound('level-up-191997.wav')
+        self.play_rick_astley()
         self.analyze_button.setEnabled(True)
 
     def play_sound(self, sound_file):
@@ -186,7 +185,12 @@ class UnfollowersAnalyzer(QWidget):
             print(f"Error playing sound: {e}")
 
     def play_rick_astley(self):
-        self.play_sound('Rick Astley - Never Gonna Give You Up (Official Music Video).wav')
+        try:
+            print("Playing Rick Astley song")
+            pygame.mixer.music.load('Rick Astley - Never Gonna Give You Up (Official Music Video).wav')
+            pygame.mixer.music.play()
+        except Exception as e:
+            print(f"Error playing Rick Astley song: {e}")
 
     def closeEvent(self, event):
         self.play_sound('simple-notification-152054.wav')
