@@ -1,4 +1,5 @@
 ## Instagram Unfollowers Analyzer
+<img width="536" alt="Screenshot 2024-07-10 at 22 20 29" src="https://github.com/cucuwritescode/instagram-unfollowers-analyzer/assets/63936029/0b8f8529-8a5b-4cae-99e5-36072f81aa86">
 
 -A simple Python tool that helps you identify which users you follow on Instagram do not follow you back. By analyzing the JSON data provided by Instagram’s data export tool, the script compares your list of followers and followings to generate a list of non-followers. This tool provides a simple and reliable way to manage your Instagram connections without relying on third-party apps or services that may steal your data.
 
