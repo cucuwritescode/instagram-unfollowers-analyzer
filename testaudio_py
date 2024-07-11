@@ -1,0 +1,14 @@
+import simpleaudio as sa
+
+def play_sound():
+    try:
+        sound_file = 'level-up-191997.wav' 
+        print(f"Playing sound from: {sound_file}")
+        wave_obj = sa.WaveObject.from_wave_file(sound_file)
+        play_obj = wave_obj.play()
+        play_obj.wait_done()
+    except Exception as e:
+        print(f"Error playing sound: {e}")
+
+if __name__ == '__main__':
+    play_sound()
