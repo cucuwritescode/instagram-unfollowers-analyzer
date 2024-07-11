@@ -2,7 +2,7 @@ import sys
 import json
 import pygame
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QLabel, QPushButton, QFileDialog, QTextEdit, QProgressBar
-from PyQt5.QtGui import QIcon
+from PyQt5.QtGui import QIcon, QPixmap
 from PyQt5.QtCore import Qt, QThread, pyqtSignal
 
 class AnalyzerThread(QThread):
@@ -47,6 +47,14 @@ class UnfollowersAnalyzer(QWidget):
         self.setGeometry(100, 100, 500, 550)
 
         layout = QVBoxLayout()
+
+        # Add Instagram logo at the top
+        self.logo_label = QLabel(self)
+        pixmap = QPixmap('images/old instagram logo.png')
+        scaled_pixmap = pixmap.scaled(100, 100, Qt.KeepAspectRatio, Qt.SmoothTransformation)
+        self.logo_label.setPixmap(scaled_pixmap)
+        self.logo_label.setAlignment(Qt.AlignCenter)
+        layout.addWidget(self.logo_label)
 
         self.followers_button = QPushButton('Load Followers JSON', self)
         self.followers_button.clicked.connect(self.load_followers)
@@ -134,7 +142,7 @@ class UnfollowersAnalyzer(QWidget):
             if file_name:
                 with open(file_name, 'r') as file:
                     self.followers_data = json.load(file)
-                self.play_sound('level-up-191997.wav')
+                self.play_sound('sound/level-up-191997.wav')
                 print("Followers data loaded successfully")
                 self.check_ready()
         except Exception as e:
@@ -147,7 +155,7 @@ class UnfollowersAnalyzer(QWidget):
             if file_name:
                 with open(file_name, 'r') as file:
                     self.following_data = json.load(file)
-                self.play_sound('level-up-191997.wav')
+                self.play_sound('sound/level-up-191997.wav')
                 print("Following data loaded successfully")
                 self.check_ready()
         except Exception as e:
@@ -187,13 +195,13 @@ class UnfollowersAnalyzer(QWidget):
     def play_rick_astley(self):
         try:
             print("Playing Rick Astley song")
-            pygame.mixer.music.load('Rick Astley - Never Gonna Give You Up (Official Music Video).wav')
+            pygame.mixer.music.load('sound/Rick Astley - Never Gonna Give You Up (Official Music Video).wav')
             pygame.mixer.music.play()
         except Exception as e:
             print(f"Error playing Rick Astley song: {e}")
 
     def closeEvent(self, event):
-        self.play_sound('simple-notification-152054.wav')
+        self.play_sound('sound/simple-notification-152054.wav')
         super().closeEvent(event)
 
 if __name__ == '__main__':
